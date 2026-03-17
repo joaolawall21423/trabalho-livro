@@ -9,7 +9,7 @@ async function list(req, res, next) {
 
 async function create(req, res, next) {
    try{
-    const id = await repo.create(req.livros.id, req.body);
+    const id = await repo.create( req.body);
     res.status(201).json({ id});
 } catch (e) { next(e); }
 }
